@@ -25,7 +25,7 @@ const Product = () => {
 
   const addProduk = () => {
     if (!nama || !harga || !gambar) {
-      setFormError('Semua kolom harus diisi!!');
+      setFormError('Kolom Tidak Boleh Kosong!');
       return;
     }
 
@@ -57,7 +57,7 @@ const Product = () => {
 
   const updateProduk = () => {
     if (!nama || !harga || !gambar) {
-      setFormError('Semua kolom harus diisi!!');
+      setFormError('Kolom Tidak Boleh Kosong!');
       return;
     }
 
@@ -100,9 +100,12 @@ const Product = () => {
   };
 
   const deleteProduk = (id) => {
-    const updatedProdukList = produkList.filter((produk) => produk.id !== id);
-    setProdukList(updatedProdukList);
-    setFormError('');
+    const confirmation = window.confirm('Yakin ingin menghapus produk?');
+    if (confirmation) {
+      const updatedProdukList = produkList.filter((produk) => produk.id !== id);
+      setProdukList(updatedProdukList);
+      setFormError('');
+    }
   };
 
   return (
