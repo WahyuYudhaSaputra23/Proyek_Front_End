@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+// Komponen ini digunakan untuk menambahkan produk baru. 
+// Mengelola form input untuk nama produk dan upload gambar.
+
 const AddProduct = () => {
     const [title, setTitle] = useState("");
     const [file, setFile] = useState("");

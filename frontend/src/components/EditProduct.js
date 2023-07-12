@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 
+// Komponen ini digunakan untuk memperbarui produk yang ada. 
+// Mirip dengan AddProduct.js, tetapi digunakan untuk mengedit produk yang sudah ada.
+
 const EditProduct = () => {
     const [title, setTitle] = useState("");
     const [file, setFile] = useState("");

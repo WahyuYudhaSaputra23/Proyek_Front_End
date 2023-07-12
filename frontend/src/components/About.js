@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Komponen ini menampilkan informasi tentang Toko.
+
 const About = () => {
   return (
     <div className="about">

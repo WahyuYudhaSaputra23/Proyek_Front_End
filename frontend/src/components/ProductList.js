@@ -2,6 +2,10 @@ import React,{useState, useEffect} from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+// Komponen ini menampilkan daftar produk yang diambil dari 
+// backend. Setiap produk ditampilkan dengan detailnya dan 
+// memiliki opsi untuk mengedit atau menghapus produk.
+
 const ProductList = () => {
     const [products, setProducts] = useState([]);
 
